@@ -9,6 +9,9 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.primary,
+      ),
       body: SizedBox(
         width: double.maxFinite,
         height: double.maxFinite,
@@ -48,31 +51,13 @@ class ProfilePage extends StatelessWidget {
                         width: 16,
                         fit: BoxFit.none,
                       ),
-                      contentPadding: const EdgeInsets.only(
-                        top: 16,
-                        bottom: 15,
-                      ),
-                      filled: true,
-                      fillColor: const Color(0xffF1F1F1),
                       hintText: "Name",
-                      hintStyle: GoogleFonts.redHatDisplay(
-                        color: const Color(0xff444444),
-                        fontSize: 18,
-                        // fontWeight: FontWeight.normal,
-                      ),
-                      border: const OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10),
-                        ),
-                        borderSide: BorderSide.none,
-                      ),
                     ),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
                   TextField(
-                    controller: nameController,
                     decoration: InputDecoration(
                       prefixIcon: SvgPicture.asset(
                         "assets/icons/person.svg",
@@ -80,24 +65,21 @@ class ProfilePage extends StatelessWidget {
                         width: 16,
                         fit: BoxFit.none,
                       ),
-                      contentPadding: const EdgeInsets.only(
-                        top: 16,
-                        bottom: 15,
-                      ),
-                      filled: true,
-                      fillColor: const Color(0xffF1F1F1),
                       hintText: "Short Name",
-                      hintStyle: GoogleFonts.redHatDisplay(
-                        color: const Color(0xff444444),
-                        fontSize: 18,
-                        // fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      prefixIcon: SvgPicture.asset(
+                        "assets/icons/cnic.svg",
+                        height: 20,
+                        width: 16,
+                        fit: BoxFit.none,
                       ),
-                      border: const OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10),
-                        ),
-                        borderSide: BorderSide.none,
-                      ),
+                      hintText: "CNIC",
                     ),
                   ),
                 ],

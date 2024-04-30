@@ -1,6 +1,8 @@
 import 'package:auth_ui/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
+import 'themes/theme_data.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -13,10 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: lightThemeData,
+      darkTheme: darkThemeData,
       home: ProfilePage(),
     );
   }
