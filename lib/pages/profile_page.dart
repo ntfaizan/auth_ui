@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../widgets/custom_textfield.dart';
-
 class ProfilePage extends StatelessWidget {
   ProfilePage({super.key});
   final nameController = TextEditingController();
@@ -41,26 +39,66 @@ class ProfilePage extends StatelessWidget {
                   const SizedBox(
                     height: 22,
                   ),
-                  CustomTextField(
-                    iconPath: "assets/icons/person.svg",
-                    hint: "Name",
+                  TextField(
                     controller: nameController,
+                    decoration: InputDecoration(
+                      prefixIcon: SvgPicture.asset(
+                        "assets/icons/person.svg",
+                        height: 20,
+                        width: 16,
+                        fit: BoxFit.none,
+                      ),
+                      contentPadding: const EdgeInsets.only(
+                        top: 16,
+                        bottom: 15,
+                      ),
+                      filled: true,
+                      fillColor: const Color(0xffF1F1F1),
+                      hintText: "Name",
+                      hintStyle: GoogleFonts.redHatDisplay(
+                        color: const Color(0xff444444),
+                        fontSize: 18,
+                        // fontWeight: FontWeight.normal,
+                      ),
+                      border: const OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                        borderSide: BorderSide.none,
+                      ),
+                    ),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
-                  CustomTextField(
-                    iconPath: "assets/icons/person.svg",
-                    hint: "Short Name",
+                  TextField(
                     controller: nameController,
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  CustomTextField(
-                    iconPath: "assets/icons/person.svg",
-                    hint: "CNIC",
-                    controller: nameController,
+                    decoration: InputDecoration(
+                      prefixIcon: SvgPicture.asset(
+                        "assets/icons/person.svg",
+                        height: 20,
+                        width: 16,
+                        fit: BoxFit.none,
+                      ),
+                      contentPadding: const EdgeInsets.only(
+                        top: 16,
+                        bottom: 15,
+                      ),
+                      filled: true,
+                      fillColor: const Color(0xffF1F1F1),
+                      hintText: "Short Name",
+                      hintStyle: GoogleFonts.redHatDisplay(
+                        color: const Color(0xff444444),
+                        fontSize: 18,
+                        // fontWeight: FontWeight.normal,
+                      ),
+                      border: const OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                        borderSide: BorderSide.none,
+                      ),
+                    ),
                   ),
                 ],
               ),
