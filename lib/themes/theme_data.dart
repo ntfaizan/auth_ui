@@ -7,9 +7,3 @@ final lightThemeData = ThemeData(
   useMaterial3: true,
   inputDecorationTheme: lightInputDecorationTheme,
 );
-
-final darkThemeData = ThemeData(
-  colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
-  useMaterial3: true,
-  inputDecorationTheme: darkInputDecorationTheme,
-);
